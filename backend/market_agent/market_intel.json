@@ -1,0 +1,737 @@
+{
+  "meta": {
+    "collected_at": "2026-03-14T20:04:09.072045+00:00",
+    "sources_rss": [
+      "CoinDesk",
+      "CoinTelegraph",
+      "The Block",
+      "CoinTelegraph Bitcoin",
+      "CoinTelegraph Ethereum",
+      "CoinTelegraph Regulation"
+    ],
+    "sources_twitter": []
+  },
+  "news": [
+    {
+      "title": "‘Adoption paradox’ in effect as Ether lags while network activity surges",
+      "summary": "Data shows that Ether price dynamics are being driven by capital flows rather than network activity growth, said CryptoQuant analyst Julio Moreno.",
+      "link": "https://cointelegraph.com/news/ethereum-adoption-paradox-deepens-as-network-activity-increases-while-prices-sink?utm_source=rss_feed&utm_medium=rss_tag_ethereum&utm_campaign=rss_partner_inbound",
+      "published_iso": "Wed, 11 Mar 2026 06:28:12 +0000",
+      "source": "CoinTelegraph Ethereum",
+      "lang": "en"
+    },
+    {
+      "title": "Ether funding rate flips negative: Are ETH bears back in control?",
+      "summary": "Bearish Ether derivatives data and slowing network use weigh on ETH price, even as developers plan for faster transactions and more flexible wallet fees.",
+      "link": "https://cointelegraph.com/news/ether-funding-rate-flips-negative-are-eth-bears-back-in-control?utm_source=rss_feed&utm_medium=rss_tag_ethereum&utm_campaign=rss_partner_inbound",
+      "published_iso": "Tue, 10 Mar 2026 21:19:35 +0000",
+      "source": "CoinTelegraph Ethereum",
+      "lang": "en"
+    },
+    {
+      "title": "Bitcoin leads, altcoin indicators drop to intriguing lows: Time for an altseason?",
+      "summary": "Bitcoin is the frontrunner in the crypto market, while 36% of altcoins trade near their all-time lows. Do altcoin price metrics suggest an altseason is next?",
+      "link": "https://cointelegraph.com/news/bitcoin-leads-altcoin-indicators-drop-to-intriguing-lows-time-for-an-altseason?utm_source=rss_feed&utm_medium=rss_tag_ethereum&utm_campaign=rss_partner_inbound",
+      "published_iso": "Tue, 10 Mar 2026 19:40:37 +0000",
+      "source": "CoinTelegraph Ethereum",
+      "lang": "en"
+    },
+    {
+      "title": "Was Ethereum 'ultrasound money' a mistake? ETH down 65% vs. BTC since pivot",
+      "summary": "Ethereum has failed to remain deflationary since the switch to Proof-of-Stake, as ETH's price has disappointed Ether investors, particularly against Bitcoin.",
+      "link": "https://cointelegraph.com/news/was-ethereum-ultrasound-money-mistake-eth-btc-down-60-since-pos?utm_source=rss_feed&utm_medium=rss_tag_ethereum&utm_campaign=rss_partner_inbound",
+      "published_iso": "Tue, 10 Mar 2026 11:20:29 +0000",
+      "source": "CoinTelegraph Ethereum",
+      "lang": "en"
+    },
+    {
+      "title": "Vitalik Buterin envisions ‘one-click’ Ether staking for institutions",
+      "summary": "“We want the authority over staking nodes to be highly distributed, and the first step to doing this is to make it easy,” said Ethereum co-founder Vitalik Buterin.",
+      "link": "https://cointelegraph.com/news/vitalik-distributed-validator-technology-lite-simplify-institutional-eth-staking?utm_source=rss_feed&utm_medium=rss_tag_ethereum&utm_campaign=rss_partner_inbound",
+      "published_iso": "Tue, 10 Mar 2026 06:06:56 +0000",
+      "source": "CoinTelegraph Ethereum",
+      "lang": "en"
+    },
+    {
+      "title": "Sharplink reports $735M loss in 2025 as Ethereum slumped",
+      "summary": "Sharplink says it will continue to acquire Ether despite a brutal crypto market sell-off last year that led to a $616.2 million paper loss on its ETH holdings.",
+      "link": "https://cointelegraph.com/news/sharplink-reports-734m-loss-2025-as-ethereum-dived?utm_source=rss_feed&utm_medium=rss_tag_ethereum&utm_campaign=rss_partner_inbound",
+      "published_iso": "Tue, 10 Mar 2026 05:06:33 +0000",
+      "source": "CoinTelegraph Ethereum",
+      "lang": "en"
+    },
+    {
+      "title": "US Senate leader doesn’t expect market structure to pass before April: Report",
+      "summary": "Senator John Thune reportedly said that the chamber would prioritize the SAVE America Act before addressing a vote on bipartisan bills like crypto market structure.",
+      "link": "https://cointelegraph.com/news/us-senate-thune-crypto-market-structure-april?utm_source=rss_feed&utm_medium=rss_tag_regulation&utm_campaign=rss_partner_inbound",
+      "published_iso": "Thu, 12 Mar 2026 22:06:18 +0000",
+      "source": "CoinTelegraph Regulation",
+      "lang": "en"
+    },
+    {
+      "title": "SEC’s ‘Crypto Mom’ calls for simpler disclosure rules, flags tokenization debate",
+      "summary": "SEC Commissioner Hester Peirce urged regulators to simplify corporate disclosure rules and allow experimentation with tokenized securities via a potential innovation exemption.",
+      "link": "https://cointelegraph.com/news/sec-crypto-mom-simpler-disclosure-rules-flags-tokenization-debate?utm_source=rss_feed&utm_medium=rss_tag_regulation&utm_campaign=rss_partner_inbound",
+      "published_iso": "Thu, 12 Mar 2026 21:40:18 +0000",
+      "source": "CoinTelegraph Regulation",
+      "lang": "en"
+    },
+    {
+      "title": "Anchorage Digital ties in Puffer Finance for institutional Ethereum restaking",
+      "summary": "The integration allows institutions to stake Ether held in Anchorage custody and receive Puffer’s liquid restaking token while earning staking and restaking rewards.",
+      "link": "https://cointelegraph.com/news/anchorage-digital-integrates-puffer-finance-to-offer-institutional-ethereum-restaking?utm_source=rss_feed&utm_medium=rss_tag_ethereum&utm_campaign=rss_partner_inbound",
+      "published_iso": "Thu, 12 Mar 2026 21:16:54 +0000",
+      "source": "CoinTelegraph Ethereum",
+      "lang": "en"
+    },
+    {
+      "title": "US Senate votes to include CBDC ban in bipartisan housing bill",
+      "summary": "The provision banning the Federal Reserve from issuing a central bank digital currency was included in housing affordability legislation.",
+      "link": "https://cointelegraph.com/news/us-senate-votes-cbdc-ban-amendment?utm_source=rss_feed&utm_medium=rss_tag_regulation&utm_campaign=rss_partner_inbound",
+      "published_iso": "Thu, 12 Mar 2026 20:23:11 +0000",
+      "source": "CoinTelegraph Regulation",
+      "lang": "en"
+    },
+    {
+      "title": "Binance claims ‘full and complete legal victory‘ in Alabama court",
+      "summary": "While a judge granted a motion by Changpeng Zhao, he also ordered the plaintiffs in the case against Binance to file a second complaint or face ”total or partial dismissal.”",
+      "link": "https://cointelegraph.com/news/binance-legal-win-alabama-court-terrorism?utm_source=rss_feed&utm_medium=rss_tag_regulation&utm_campaign=rss_partner_inbound",
+      "published_iso": "Thu, 12 Mar 2026 19:54:03 +0000",
+      "source": "CoinTelegraph Regulation",
+      "lang": "en"
+    },
+    {
+      "title": "Bitcoin funding rate flips negative: Are bears getting too confident?",
+      "summary": "While geopolitical tension and weak labor data are hurting market sentiment, institutional buying below $75,000 may soon exhaust sellers and spark a bull run.",
+      "link": "https://cointelegraph.com/news/bitcoin-funding-rate-flips-negative-are-btc-bears-too-confident?utm_source=rss_feed&utm_medium=rss_tag_bitcoin&utm_campaign=rss_partner_inbound",
+      "published_iso": "Thu, 12 Mar 2026 19:01:34 +0000",
+      "source": "CoinTelegraph Bitcoin",
+      "lang": "en"
+    },
+    {
+      "title": "Coinbase execs deny lobbying against Bitcoin de minimis tax exemption",
+      "summary": "US lawmakers are eyeing tax exemptions for US dollar stablecoins, which are designed to maintain a fixed value, but not other cryptocurrencies.",
+      "link": "https://cointelegraph.com/news/coinbase-deny-lobby-bitcoin-tax-exemption?utm_source=rss_feed&utm_medium=rss_tag_regulation&utm_campaign=rss_partner_inbound",
+      "published_iso": "Thu, 12 Mar 2026 18:54:28 +0000",
+      "source": "CoinTelegraph Regulation",
+      "lang": "en"
+    },
+    {
+      "title": "CFTC chair opens prediction markets rulemaking to public comment",
+      "summary": "“This ends today,“ said CFTC Chair Michael Selig, who has been reiterating his position that the agency has exclusive jurisdiction overseeing prediction markets platforms.",
+      "link": "https://cointelegraph.com/news/cftc-chair-prediction-markets-rulemaking?utm_source=rss_feed&utm_medium=rss_tag_regulation&utm_campaign=rss_partner_inbound",
+      "published_iso": "Thu, 12 Mar 2026 17:06:53 +0000",
+      "source": "CoinTelegraph Regulation",
+      "lang": "en"
+    },
+    {
+      "title": "FATF warns offshore crypto firms create money laundering and sanctions gaps",
+      "summary": "A new FATF report says crypto exchanges operating offshore can create gaps in AML enforcement, making it harder for regulators to track illicit activity.",
+      "link": "https://cointelegraph.com/news/fatf-warns-offshore-crypto-platforms-illicit-finance-risks?utm_source=rss_feed&utm_medium=rss_tag_regulation&utm_campaign=rss_partner_inbound",
+      "published_iso": "Thu, 12 Mar 2026 13:11:15 +0000",
+      "source": "CoinTelegraph Regulation",
+      "lang": "en"
+    },
+    {
+      "title": "BlackRock launches staked Ethereum ETF offering ETH exposure and yield",
+      "summary": "BlackRock’s iShares Staked Ethereum Trust ETF will trade on the Nasdaq, offering spot exposure and staking income with a reduced 0.12% fee on the first $2.5 billion.",
+      "link": "https://cointelegraph.com/news/blackrock-ishares-staked-ethereum-trust-etf-exposure-yield?utm_source=rss_feed&utm_medium=rss_tag_ethereum&utm_campaign=rss_partner_inbound",
+      "published_iso": "Thu, 12 Mar 2026 12:56:54 +0000",
+      "source": "CoinTelegraph Ethereum",
+      "lang": "en"
+    },
+    {
+      "title": "South Korea plans to use AI for crypto tax enforcement",
+      "summary": "The National Tax Service has opened a procurement bid for a platform to analyze crypto trading data and flag potential tax evasion.",
+      "link": "https://cointelegraph.com/news/south-korea-tax-agency-ai-system-track-crypto-gains?utm_source=rss_feed&utm_medium=rss_tag_regulation&utm_campaign=rss_partner_inbound",
+      "published_iso": "Thu, 12 Mar 2026 12:18:18 +0000",
+      "source": "CoinTelegraph Regulation",
+      "lang": "en"
+    },
+    {
+      "title": "Utah set to block prediction markets as state-federal tensions rise",
+      "summary": "CFTC Chair Michael Selig has said that the agency has authority over prediction markets like Kalshi and Polymarket and warned it will defend that jurisdiction in court if challenged.",
+      "link": "https://cointelegraph.com/news/utah-set-to-block-prediction-markets-kalshi-polymarket?utm_source=rss_feed&utm_medium=rss_tag_regulation&utm_campaign=rss_partner_inbound",
+      "published_iso": "Thu, 12 Mar 2026 10:11:51 +0000",
+      "source": "CoinTelegraph Regulation",
+      "lang": "en"
+    },
+    {
+      "title": "US prosecutors urge judge to deny Sam Bankman-Fried retrial bid: Report",
+      "summary": "Prosecutors say testimony from two former FTX executives cited by the defense does not qualify as newly discovered evidence, Bloomberg reported.",
+      "link": "https://cointelegraph.com/news/us-prosecutors-oppose-sam-bankman-fried-new-trial-ftx-case?utm_source=rss_feed&utm_medium=rss_tag_regulation&utm_campaign=rss_partner_inbound",
+      "published_iso": "Thu, 12 Mar 2026 08:03:15 +0000",
+      "source": "CoinTelegraph Regulation",
+      "lang": "en"
+    },
+    {
+      "title": "Kalshi preemptively sues Iowa, claiming risk of enforcement action",
+      "summary": "Kalshi claims in a preemptive lawsuit that there is “a substantial risk” that Iowa will take action against it after a meeting it had with state regulators.",
+      "link": "https://cointelegraph.com/news/kalshi-preemptively-sues-iowa-claiming-risk-of-enforcement-action?utm_source=rss_feed&utm_medium=rss_tag_regulation&utm_campaign=rss_partner_inbound",
+      "published_iso": "Thu, 12 Mar 2026 05:37:35 +0000",
+      "source": "CoinTelegraph Regulation",
+      "lang": "en"
+    },
+    {
+      "title": "Stablecoin yields will bring fresh money to US banks: White House's Witt",
+      "summary": "Global demand for the US dollar is “massive,” and stablecoin yields will only bring more interest to the currency, argued the White House crypto chief.",
+      "link": "https://cointelegraph.com/news/stablecoin-yields-united-states-banking-clarity-act-white-house?utm_source=rss_feed&utm_medium=rss_tag_regulation&utm_campaign=rss_partner_inbound",
+      "published_iso": "Thu, 12 Mar 2026 05:31:51 +0000",
+      "source": "CoinTelegraph Regulation",
+      "lang": "en"
+    },
+    {
+      "title": "Hoskinson might be wrong about the future of decentralized compute",
+      "summary": "",
+      "link": "https://www.coindesk.com/opinion/2026/03/14/hoskinson-might-be-wrong-about-the-future-of-decentralized-compute",
+      "published_iso": "Sat, 14 Mar 2026 18:30:00 +0000",
+      "source": "CoinDesk",
+      "lang": "en"
+    },
+    {
+      "title": "Former UK Prime Minister Boris Johnson calls Bitcoin a ‘Ponzi scheme’",
+      "summary": "Johnson said that he could understand why gold and Pokémon cards have investment appeal but not Bitcoin, which he characterized as a scam.",
+      "link": "https://cointelegraph.com/news/boris-johnson-btc-ponzi-scheme?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published_iso": "Sat, 14 Mar 2026 18:09:15 +0000",
+      "source": "CoinTelegraph",
+      "lang": "en"
+    },
+    {
+      "title": "Former UK Prime Minister Boris Johnson calls Bitcoin a ‘Ponzi scheme’",
+      "summary": "Johnson said that he could understand why gold and Pokémon cards have investment appeal but not Bitcoin, which he characterized as a scam.",
+      "link": "https://cointelegraph.com/news/boris-johnson-btc-ponzi-scheme?utm_source=rss_feed&utm_medium=rss_tag_bitcoin&utm_campaign=rss_partner_inbound",
+      "published_iso": "Sat, 14 Mar 2026 18:09:15 +0000",
+      "source": "CoinTelegraph Bitcoin",
+      "lang": "en"
+    },
+    {
+      "title": "Crypto’s multi-million F1 sponsorship under fire as Middle East war hits region's biggest events",
+      "summary": "",
+      "link": "https://www.coindesk.com/business/2026/03/14/crypto-s-multi-million-f1-sponsorship-under-fire-as-middle-east-war-hits-region-s-biggest-events",
+      "published_iso": "Sat, 14 Mar 2026 18:00:00 +0000",
+      "source": "CoinDesk",
+      "lang": "en"
+    },
+    {
+      "title": "Ethereum Foundation sells 5,000 ether to Tom Lee's BitMine in $10.2 million deal",
+      "summary": "",
+      "link": "https://www.coindesk.com/business/2026/03/14/ethereum-foundation-sells-5-000-ether-to-tom-lee-s-bitmine-in-usd10-2-million-deal",
+      "published_iso": "Sat, 14 Mar 2026 17:56:34 +0000",
+      "source": "CoinDesk",
+      "lang": "en"
+    },
+    {
+      "title": "Bitcoin beats stocks as Strategy's STRC hints at $776M BTC buying potential",
+      "summary": "BTC faces bull trap risks due to the formation of a bear flag pattern, with a measured downside target at around $51,000.",
+      "link": "https://cointelegraph.com/news/bitcoin-beats-stocks-strategy-strc-776m-btc-buying-potential?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published_iso": "Sat, 14 Mar 2026 17:38:08 +0000",
+      "source": "CoinTelegraph",
+      "lang": "en"
+    },
+    {
+      "title": "Bitcoin beats stocks as Strategy's STRC hints at $776M BTC buying potential",
+      "summary": "BTC faces bull trap risks due to the formation of a bear flag pattern, with a measured downside target at around $51,000.",
+      "link": "https://cointelegraph.com/news/bitcoin-beats-stocks-strategy-strc-776m-btc-buying-potential?utm_source=rss_feed&utm_medium=rss_tag_bitcoin&utm_campaign=rss_partner_inbound",
+      "published_iso": "Sat, 14 Mar 2026 17:38:08 +0000",
+      "source": "CoinTelegraph Bitcoin",
+      "lang": "en"
+    },
+    {
+      "title": "Boris Johnson calling Bitcoin a ‘Ponzi’ draws rebuttal from Michael Saylor and others",
+      "summary": "",
+      "link": "https://www.coindesk.com/business/2026/03/14/boris-johnson-calling-bitcoin-a-ponzi-draws-rebuttal-from-michael-saylor-and-others",
+      "published_iso": "Sat, 14 Mar 2026 17:18:37 +0000",
+      "source": "CoinDesk",
+      "lang": "en"
+    },
+    {
+      "title": "Custodia’s five-year fight for a Fed master account effectively ends in 7-3 appeals court loss",
+      "summary": "The decision arrives days after the Kansas City Fed granted Kraken the first-ever crypto master account, a landmark for the crypto industry.",
+      "link": "https://www.theblock.co/post/393617/custodias-five-year-fight-for-a-fed-master-account-effectively-ends-in-7-3-appeals-court-loss?utm_source=rss&utm_medium=rss",
+      "published_iso": "Sat, 14 Mar 2026 16:01:33 -0400",
+      "source": "The Block",
+      "lang": "en"
+    },
+    {
+      "title": "Wall Street pushes tokenized stocks, but institutions aren’t eager to trade them",
+      "summary": "",
+      "link": "https://www.coindesk.com/business/2026/03/14/wall-street-pushes-tokenized-stocks-but-institutions-aren-t-eager-to-trade-them",
+      "published_iso": "Sat, 14 Mar 2026 16:00:00 +0000",
+      "source": "CoinDesk",
+      "lang": "en"
+    },
+    {
+      "title": "Brazil industry giants representing 850 companies decry stablecoin tax threat",
+      "summary": "",
+      "link": "https://www.coindesk.com/business/2026/03/14/brazil-industry-giants-representing-850-companies-decry-stablecoin-tax-threat",
+      "published_iso": "Sat, 14 Mar 2026 14:58:14 +0000",
+      "source": "CoinDesk",
+      "lang": "en"
+    },
+    {
+      "title": "Ethereum Foundation sells 5,000 ETH to Tom Lee’s BitMine in $10 million OTC deal",
+      "summary": "The deal is the EF's second known OTC sale to a corporate buyer, following a 10,000 ETH sale to SharpLink Gaming in July 2025.",
+      "link": "https://www.theblock.co/post/393614/ethereum-foundation-sells-5000-eth-to-tom-lees-bitmine-in-10-million-otc-deal?utm_source=rss&utm_medium=rss",
+      "published_iso": "Sat, 14 Mar 2026 14:19:56 -0400",
+      "source": "The Block",
+      "lang": "en"
+    },
+    {
+      "title": "The math behind Strategy’s path to 1 million bitcoin by the end of 2026",
+      "summary": "",
+      "link": "https://www.coindesk.com/markets/2026/03/14/the-math-behind-strategy-s-path-to-1-million-bitcoin-by-the-end-of-2026",
+      "published_iso": "Sat, 14 Mar 2026 14:00:00 +0000",
+      "source": "CoinDesk",
+      "lang": "en"
+    },
+    {
+      "title": "AI developers may not be keen on crypto, but stablecoins are the secret to agentic finance, crypto insiders say",
+      "summary": "",
+      "link": "https://www.coindesk.com/business/2026/03/14/ai-developers-may-not-be-keen-on-crypto-but-stablecoins-are-the-secret-to-agentic-finance-crypto-insiders-say",
+      "published_iso": "Sat, 14 Mar 2026 14:00:00 +0000",
+      "source": "CoinDesk",
+      "lang": "en"
+    },
+    {
+      "title": "Here’s what happened in crypto today",
+      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
+      "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published_iso": "Sat, 14 Mar 2026 13:13:01 +0000",
+      "source": "CoinTelegraph",
+      "lang": "en"
+    },
+    {
+      "title": "Here’s what happened in crypto today",
+      "summary": "Need to know what happened in crypto today? Here is the latest news on daily trends and events impacting Bitcoin price, blockchain, DeFi, NFTs, Web3 and crypto regulation.",
+      "link": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss_tag_ethereum&utm_campaign=rss_partner_inbound",
+      "published_iso": "Sat, 14 Mar 2026 13:13:01 +0000",
+      "source": "CoinTelegraph Ethereum",
+      "lang": "en"
+    },
+    {
+      "title": "Balaji calls for more ‘crypto tools’ for refugees amid Middle East tensions",
+      "summary": "Former Coinbase CTO says the crypto industry should build more financial tools for refugees and stateless people as conflicts and migration increase worldwide.",
+      "link": "https://cointelegraph.com/news/balaji-calls-for-crypto-tools-for-refugees-stateless-people?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published_iso": "Sat, 14 Mar 2026 13:05:18 +0000",
+      "source": "CoinTelegraph",
+      "lang": "en"
+    },
+    {
+      "title": "SEC dismisses civil fraud case against BitClout, DeSo founder Nader Al-Naji with prejudice",
+      "summary": "The SEC in 2024 had accused Al-Naji of allegedly spending more than $7 million of investor funds on personal expenses.",
+      "link": "https://www.theblock.co/post/393611/sec-dismisses-civil-fraud-case-against-bitclout-deso-founder-nader-al-naji-with-prejudice?utm_source=rss&utm_medium=rss",
+      "published_iso": "Sat, 14 Mar 2026 13:00:58 -0400",
+      "source": "The Block",
+      "lang": "en"
+    },
+    {
+      "title": "Crypto can fight money laundering without stifling financial freedom",
+      "summary": "Blockchain's transparency traces illicit flows better than fiat systems. Industry-wide information sharing and unified AML rules close gaps, without curbing liberty.",
+      "link": "https://cointelegraph.com/news/crypto-can-fight-money-laundering?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published_iso": "Sat, 14 Mar 2026 12:30:00 +0000",
+      "source": "CoinTelegraph",
+      "lang": "en"
+    },
+    {
+      "title": "USDC market cap nears record $80B amid ‘capital flight’ in UAE: Analyst",
+      "summary": "USDC’s market cap is approaching a record $80 billion, with one analyst linking the surge to capital flight and turmoil in Dubai’s real estate market.",
+      "link": "https://cointelegraph.com/news/usdc-market-cap-nears-80b-uae-capital-flight-analyst?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published_iso": "Sat, 14 Mar 2026 10:43:55 +0000",
+      "source": "CoinTelegraph",
+      "lang": "en"
+    },
+    {
+      "title": "IRS crypto reporting rules set stage for confusing tax season: Here’s what you need to know",
+      "summary": "Traders involved in DeFi and have transactions and transfers between multiple wallets and exchanges will face more challenges.",
+      "link": "https://www.theblock.co/post/393574/irs-crypto-reporting-rules-set-stage-for-confusing-tax-season-heres-what-you-need-to-know?utm_source=rss&utm_medium=rss",
+      "published_iso": "Sat, 14 Mar 2026 08:31:01 -0400",
+      "source": "The Block",
+      "lang": "en"
+    },
+    {
+      "title": "Spot Bitcoin ETFs extend inflow streak to five days for first time in 2026",
+      "summary": "US spot Bitcoin ETFs brought in about $767 million over five straight days of inflows for the first time so far this year.",
+      "link": "https://cointelegraph.com/news/spot-bitcoin-etfs-five-day-inflow-streak-2026?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published_iso": "Sat, 14 Mar 2026 08:11:32 +0000",
+      "source": "CoinTelegraph",
+      "lang": "en"
+    },
+    {
+      "title": "Spot Bitcoin ETFs extend inflow streak to five days for first time in 2026",
+      "summary": "US spot Bitcoin ETFs brought in about $767 million over five straight days of inflows for the first time so far this year.",
+      "link": "https://cointelegraph.com/news/spot-bitcoin-etfs-five-day-inflow-streak-2026?utm_source=rss_feed&utm_medium=rss_tag_bitcoin&utm_campaign=rss_partner_inbound",
+      "published_iso": "Sat, 14 Mar 2026 08:11:32 +0000",
+      "source": "CoinTelegraph Bitcoin",
+      "lang": "en"
+    },
+    {
+      "title": "Bitcoin holds $71,000 despite Trump warning of strikes on Iran's oil-rich Kharg Island",
+      "summary": "",
+      "link": "https://www.coindesk.com/markets/2026/03/14/bitcoin-holds-usd71-000-despite-trump-warning-after-iran-oil-strikes",
+      "published_iso": "Sat, 14 Mar 2026 06:08:27 +0000",
+      "source": "CoinDesk",
+      "lang": "en"
+    },
+    {
+      "title": "BlackRock says 'exotic' crypto ETFs not part of its strategy",
+      "summary": "BlackRock launched a staked Ether exchange-traded fund on Thursday, expanding its crypto offerings beyond its flagship spot Bitcoin and Ether ETFs that launched in 2024.",
+      "link": "https://cointelegraph.com/news/blackrock-wont-consider-exotic-crypto-etfs?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published_iso": "Sat, 14 Mar 2026 04:52:48 +0000",
+      "source": "CoinTelegraph",
+      "lang": "en"
+    },
+    {
+      "title": "Bitcoin can survive 72% of the world's submarine cables being cut, but a targeted attack on five hosting providers could cripple it",
+      "summary": "",
+      "link": "https://www.coindesk.com/markets/2026/03/13/bitcoin-can-survive-72-of-the-world-s-submarine-cables-being-cut-but-a-targeted-attack-on-five-hosting-providers-could-cripple-it",
+      "published_iso": "Sat, 14 Mar 2026 03:30:00 +0000",
+      "source": "CoinDesk",
+      "lang": "en"
+    },
+    {
+      "title": "Stablecoins could form backbone of global payments in 10 years: Billionaire",
+      "summary": "Stanley Druckenmiller said stablecoins are more efficient, faster and cheaper than fiat running on traditional banking infrastructure.",
+      "link": "https://cointelegraph.com/news/stablecoins-power-global-payments-10-years-stanley-druckenmiller?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published_iso": "Sat, 14 Mar 2026 01:22:32 +0000",
+      "source": "CoinTelegraph",
+      "lang": "en"
+    },
+    {
+      "title": "Bitcoin nearly overtakes $74K, as data suggests bear market is not over",
+      "summary": "Bitcoin showed remarkable strength throughout the week, but BTC’s correlation to tech stocks and its reactive spot ETF flows suggest the bear market isn’t over yet.",
+      "link": "https://cointelegraph.com/news/bitcoin-nearly-overtakes-dollar74k-as-data-suggests-bear-market-is-not-over?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published_iso": "Sat, 14 Mar 2026 01:06:31 +0000",
+      "source": "CoinTelegraph",
+      "lang": "en"
+    },
+    {
+      "title": "Bitcoin nearly overtakes $74K, as data suggests bear market is not over",
+      "summary": "Bitcoin showed remarkable strength throughout the week, but BTC’s correlation to tech stocks and its reactive spot ETF flows suggest the bear market isn’t over yet.",
+      "link": "https://cointelegraph.com/news/bitcoin-nearly-overtakes-dollar74k-as-data-suggests-bear-market-is-not-over?utm_source=rss_feed&utm_medium=rss_tag_bitcoin&utm_campaign=rss_partner_inbound",
+      "published_iso": "Sat, 14 Mar 2026 01:06:31 +0000",
+      "source": "CoinTelegraph Bitcoin",
+      "lang": "en"
+    },
+    {
+      "title": "Ether holds $2K as traders make push toward overhead short liquidity",
+      "summary": "Ether's short liquidity may be the next target for bullish traders who have piled into fresh leveraged positions. Is $2,500 the next stop for ETH price?",
+      "link": "https://cointelegraph.com/news/ether-holds-dollar2k-as-traders-make-push-toward-overhead-short-liquidity?utm_source=rss_feed&utm_medium=rss_tag_ethereum&utm_campaign=rss_partner_inbound",
+      "published_iso": "Mon, 09 Mar 2026 16:14:14 +0000",
+      "source": "CoinTelegraph Ethereum",
+      "lang": "en"
+    },
+    {
+      "title": "Banks will run RWAs on two blockchain rails, says RedStone co-founder",
+      "summary": "RedStone co-founder Marcin Kaźmierczak says banks are splitting RWA infrastructure between private networks like Canton and public chains such as Ethereum.",
+      "link": "https://cointelegraph.com/news/banks-rwas-two-blockchain-rails-redstone?utm_source=rss_feed&utm_medium=rss_tag_ethereum&utm_campaign=rss_partner_inbound",
+      "published_iso": "Mon, 09 Mar 2026 13:00:00 +0000",
+      "source": "CoinTelegraph Ethereum",
+      "lang": "en"
+    },
+    {
+      "title": "Federal court ends Custodia Bank's legal bid for a master account",
+      "summary": "One judge sided with Custodia Bank, stating that a master account is “indispensable” for a bank’s day-to-day operations and being denied one is “akin to a death sentence.”",
+      "link": "https://cointelegraph.com/news/federal-court-ends-custodia-bank-s-legal-bid-for-a-master-account?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published_iso": "Fri, 13 Mar 2026 23:57:17 +0000",
+      "source": "CoinTelegraph",
+      "lang": "en"
+    },
+    {
+      "title": "A huge gap between network use and token value is the most important thing happening in XRP right now",
+      "summary": "",
+      "link": "https://www.coindesk.com/markets/2026/03/13/dnp-xrp-ledger-activity-is-hitting-records-but-why-are-xrp-prices-down-62-from-peak",
+      "published_iso": "Fri, 13 Mar 2026 23:30:00 +0000",
+      "source": "CoinDesk",
+      "lang": "en"
+    },
+    {
+      "title": "Court closes Custodia fight with Federal Reserve just as Fed opens master-account door",
+      "summary": "",
+      "link": "https://www.coindesk.com/policy/2026/03/13/court-closes-custodia-fight-with-federal-reserve-just-as-fed-opens-master-account-door",
+      "published_iso": "Fri, 13 Mar 2026 21:04:03 +0000",
+      "source": "CoinDesk",
+      "lang": "en"
+    },
+    {
+      "title": "BPI targets August for BTC tax relief, but warns time is running out",
+      "summary": "The Bitcoin Policy Institute said the bipartisan support for a de minimis tax exemption for smaller Bitcoin transactions is \"encouraging.\"",
+      "link": "https://cointelegraph.com/news/bpi-targets-august-btc-tax-relief-warns-time-running-out?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published_iso": "Fri, 13 Mar 2026 21:01:21 +0000",
+      "source": "CoinTelegraph",
+      "lang": "en"
+    },
+    {
+      "title": "BPI targets August for BTC tax relief, but warns time is running out",
+      "summary": "The Bitcoin Policy Institute said the bipartisan support for a de minimis tax exemption for smaller Bitcoin transactions is \"encouraging.\"",
+      "link": "https://cointelegraph.com/news/bpi-targets-august-btc-tax-relief-warns-time-running-out?utm_source=rss_feed&utm_medium=rss_tag_bitcoin&utm_campaign=rss_partner_inbound",
+      "published_iso": "Fri, 13 Mar 2026 21:01:21 +0000",
+      "source": "CoinTelegraph Bitcoin",
+      "lang": "en"
+    },
+    {
+      "title": "Circle‘s USDC overtook Tether‘s USDT in adjusted YTD volume: Mizuho",
+      "summary": "Analysts at the investment company said the change was significant because the stablecoin “winner” will be the one people use for everyday transactions.",
+      "link": "https://cointelegraph.com/news/circle-usdc-tether-usdt-adjusted-ytd-volume-mizuho?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published_iso": "Fri, 13 Mar 2026 20:54:15 +0000",
+      "source": "CoinTelegraph",
+      "lang": "en"
+    },
+    {
+      "title": "Ether accumulation data predicts rally to $2.8K, but there’s a catch",
+      "summary": "Ether bulls appear to be targeting $2,800 as their next stop, but ETH futures data shows a divided market with limited odds for a sustained 33% rally.",
+      "link": "https://cointelegraph.com/news/ether-accumulation-data-predicts-rally-to-dollar2-8k-but-there-s-a-catch?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published_iso": "Fri, 13 Mar 2026 20:34:28 +0000",
+      "source": "CoinTelegraph",
+      "lang": "en"
+    },
+    {
+      "title": "Ether accumulation data predicts rally to $2.8K, but there’s a catch",
+      "summary": "Ether bulls appear to be targeting $2,800 as their next stop, but ETH futures data shows a divided market with limited odds for a sustained 33% rally.",
+      "link": "https://cointelegraph.com/news/ether-accumulation-data-predicts-rally-to-dollar2-8k-but-there-s-a-catch?utm_source=rss_feed&utm_medium=rss_tag_ethereum&utm_campaign=rss_partner_inbound",
+      "published_iso": "Fri, 13 Mar 2026 20:34:28 +0000",
+      "source": "CoinTelegraph Ethereum",
+      "lang": "en"
+    },
+    {
+      "title": "Crypto Biz: Circle stock defies Wall Street and digital asset selloff",
+      "summary": "The USDC issuer's stock is soaring despite a market selloff as stablecoins expand into traditional finance. Meanwhile, Canaan boosts BTC reserves and Wells Fargo eyes crypto services.",
+      "link": "https://cointelegraph.com/news/circle-stock-stablecoin-growth-canaan-bitcoin-wells-fargo-crypto?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published_iso": "Fri, 13 Mar 2026 20:00:00 +0000",
+      "source": "CoinTelegraph",
+      "lang": "en"
+    },
+    {
+      "title": "Circle overtakes BlackRock in tokenized Treasuries as market hits record $11 billion",
+      "summary": "",
+      "link": "https://www.coindesk.com/markets/2026/03/13/circle-overtakes-blackrock-in-tokenized-treasuries-as-market-hits-record-usd11-billion",
+      "published_iso": "Fri, 13 Mar 2026 19:41:14 +0000",
+      "source": "CoinDesk",
+      "lang": "en"
+    },
+    {
+      "title": "Key Bitcoin price levels to watch as BTC nears new monthly highs",
+      "summary": "Bitcoin is on track for its strongest weekly return since its 2025 rally to new highs. Analysts highlight the price levels BTC must reach to sustain its current bullish momentum.",
+      "link": "https://cointelegraph.com/news/key-bitcoin-price-levels-to-watch-as-btc-nears-new-monthly-highs?utm_source=rss_feed&utm_medium=rss_tag_bitcoin&utm_campaign=rss_partner_inbound",
+      "published_iso": "Fri, 13 Mar 2026 19:13:03 +0000",
+      "source": "CoinTelegraph Bitcoin",
+      "lang": "en"
+    },
+    {
+      "title": "Price predictions 3/13: BTC, ETH, BNB, XRP, SOL, DOGE, HYPE, ADA, BCH, XMR",
+      "summary": "Bitcoin faced strong resistance at the $74,500 level, but the shallow price pullback could set the stage for a stronger breakout in BTC and altcoins.",
+      "link": "https://cointelegraph.com/news/price-predictions-3-13-btc-eth-bnb-xrp-sol-doge-hype-ada-bch-xmr?utm_source=rss_feed&utm_medium=rss_tag_bitcoin&utm_campaign=rss_partner_inbound",
+      "published_iso": "Fri, 13 Mar 2026 18:22:48 +0000",
+      "source": "CoinTelegraph Bitcoin",
+      "lang": "en"
+    },
+    {
+      "title": "'Gold is not a store of value anymore' — Mike McGlone predicts a 2008-like setup",
+      "summary": "According to the Bloomberg Intelligence strategist, the oil shock and rising volatility across commodities and crypto may foreshadow a broader correction in equities.",
+      "link": "https://cointelegraph.com/news/gold-not-store-of-value-anymore-mike-mcglone-predicts-2008-like-market-setup?utm_source=rss_feed&utm_medium=rss_tag_bitcoin&utm_campaign=rss_partner_inbound",
+      "published_iso": "Fri, 13 Mar 2026 17:55:49 +0000",
+      "source": "CoinTelegraph Bitcoin",
+      "lang": "en"
+    },
+    {
+      "title": "Ethereum Foundation publishes mandate clarifying role and goals",
+      "summary": "The non-profit organization said the goal is to make Ethereum so decentralized that it could function even if the foundation ceases to exist.",
+      "link": "https://cointelegraph.com/news/ethereum-foundation-mandate-role-goals?utm_source=rss_feed&utm_medium=rss_tag_ethereum&utm_campaign=rss_partner_inbound",
+      "published_iso": "Fri, 13 Mar 2026 17:32:01 +0000",
+      "source": "CoinTelegraph Ethereum",
+      "lang": "en"
+    },
+    {
+      "title": "Arthur Hayes: Strong Revenue and Real Trading Could Send HYPE to $150",
+      "summary": "",
+      "link": "https://www.coindesk.com/markets/2026/03/13/arthur-hayes-says-hyperliquid-s-hype-token-could-reach-usd150-by-2026",
+      "published_iso": "Fri, 13 Mar 2026 17:17:24 +0000",
+      "source": "CoinDesk",
+      "lang": "en"
+    },
+    {
+      "title": "Ethereum accumulation wallets jump 30%: Will ETH price follow?",
+      "summary": "Ether’s road to recovery looked clearer, especially if the balance in Ethereum accumulation wallets and the staked supply continue rising at their current pace.",
+      "link": "https://cointelegraph.com/news/ethereum-accumulation-wallets-jump-30-percent-wil-eth-price-follow?utm_source=rss_feed&utm_medium=rss_tag_ethereum&utm_campaign=rss_partner_inbound",
+      "published_iso": "Fri, 13 Mar 2026 16:49:56 +0000",
+      "source": "CoinTelegraph Ethereum",
+      "lang": "en"
+    },
+    {
+      "title": "Bitcoin quickly drops 3.5% as fresh Iran escalation short-circuits crypto rally",
+      "summary": "",
+      "link": "https://www.coindesk.com/markets/2026/03/13/bitcoin-quickly-drops-3-5-as-fresh-iran-escalation-short-circuits-crypto-rally",
+      "published_iso": "Fri, 13 Mar 2026 16:30:53 +0000",
+      "source": "CoinDesk",
+      "lang": "en"
+    },
+    {
+      "title": "Billionaire investor Druckenmiller says ‘quicker, cheaper’ stablecoins could power payments in 10-15 years",
+      "summary": "Druckenmiller argued that stablecoins could meaningfully boost financial system productivity by making payments faster and cheaper.",
+      "link": "https://www.theblock.co/post/393588/billionaire-investor-druckenmiller-quicker-cheaper-stablecoins-power-payments-10-15-years?utm_source=rss&utm_medium=rss",
+      "published_iso": "Fri, 13 Mar 2026 16:03:52 -0400",
+      "source": "The Block",
+      "lang": "en"
+    },
+    {
+      "title": "Bitcoin miners saw the AI power crunch coming — and the nuclear revival",
+      "summary": "AI-driven data center demand is reviving nuclear power across the US, and Bitcoin miners were among the first to tap nuclear energy to run high-performance computing operations.",
+      "link": "https://cointelegraph.com/news/ai-power-demand-nuclear-revival-bitcoin-mining?utm_source=rss_feed&utm_medium=rss_tag_bitcoin&utm_campaign=rss_partner_inbound",
+      "published_iso": "Fri, 13 Mar 2026 15:40:40 +0000",
+      "source": "CoinTelegraph Bitcoin",
+      "lang": "en"
+    },
+    {
+      "title": "Bitcoin price eyes $74K rematch as US PCE inflation boosts crypto, stocks",
+      "summary": "Bitcoin bulls squeezed the market toward $74,000 again as promising US inflation data buoyed risk assets, but BTC price forecasts stayed mixed.",
+      "link": "https://cointelegraph.com/news/bitcoin-price-eyes-74k-rematch-us-pce-inflation-boosts-crypto-stocks?utm_source=rss_feed&utm_medium=rss_tag_bitcoin&utm_campaign=rss_partner_inbound",
+      "published_iso": "Fri, 13 Mar 2026 14:58:30 +0000",
+      "source": "CoinTelegraph Bitcoin",
+      "lang": "en"
+    },
+    {
+      "title": "How Superstate tokenized Galaxy’s stock and what’s coming next",
+      "summary": "Galaxy Digital and Superstate execs explain how tokenized equities work and why bringing traditional financial assets onchain could transform global capital markets.",
+      "link": "https://www.theblock.co/post/393578/how-superstate-tokenized-galaxys-stock-and-whats-coming-next?utm_source=rss&utm_medium=rss",
+      "published_iso": "Fri, 13 Mar 2026 14:48:59 -0400",
+      "source": "The Block",
+      "lang": "en"
+    },
+    {
+      "title": "UK central bank is warming up to stablecoins, but says industry input is lacking",
+      "summary": "The Bank of England is open to fixes on its proposed stablecoin framework, but one official said it needs better feedback from crypto industry participants.",
+      "link": "https://cointelegraph.com/news/uk-central-bank-stablecoin-industry-input-lacking?utm_source=rss_feed&utm_medium=rss_tag_regulation&utm_campaign=rss_partner_inbound",
+      "published_iso": "Fri, 13 Mar 2026 13:30:00 +0000",
+      "source": "CoinTelegraph Regulation",
+      "lang": "en"
+    },
+    {
+      "title": "Ethereum Foundation publishes mandate outlining its role as ‘one of many stewards’ of the network",
+      "summary": "The Ethereum Foundation mandate codifies Ethereum’s core “CROPS” principles: censorship resistance, open source, privacy and security.",
+      "link": "https://www.theblock.co/post/393563/ethereum-foundation-mandate-role-one-of-many-stewards-network?utm_source=rss&utm_medium=rss",
+      "published_iso": "Fri, 13 Mar 2026 13:11:38 -0400",
+      "source": "The Block",
+      "lang": "en"
+    },
+    {
+      "title": "The Daily: Crypto whale loses almost $50M in DeFi swap, BlackRock’s staked Ethereum ETF sees ‘very solid’ debut, and more",
+      "summary": "The following article is adapted from The Block’s newsletter, The Daily, which comes out on weekday afternoons.",
+      "link": "https://www.theblock.co/post/393565/the-daily-crypto-whale-loses-almost-50m-in-defi-swap-blackrocks-staked-ethereum-etf-sees-very-solid-debut-and-more?utm_source=rss&utm_medium=rss",
+      "published_iso": "Fri, 13 Mar 2026 12:55:43 -0400",
+      "source": "The Block",
+      "lang": "en"
+    },
+    {
+      "title": "Circle’s USDC overtakes USDT in ‘adjusted’ volume year-to-date, Mizuho says",
+      "summary": "USDC is the more popular option when it comes to everyday, real-world applications, the research analysts said.",
+      "link": "https://www.theblock.co/post/393550/circles-usdc-overtakes-usdt-adjusted-volume-year-date-mizuho-says?utm_source=rss&utm_medium=rss",
+      "published_iso": "Fri, 13 Mar 2026 11:13:41 -0400",
+      "source": "The Block",
+      "lang": "en"
+    },
+    {
+      "title": "TRUMP memecoin jumps 50% overnight after gala promotion as whales scoop up tokens",
+      "summary": "One trader who previously lost about $15.7M on MELANIA is sitting on a multi-million-dollar unrealized gain from a recent TRUMP purchase.",
+      "link": "https://www.theblock.co/post/393548/trump-memecoin-jumps-50-overnight-gala-promotion-whales-scoop-tokens?utm_source=rss&utm_medium=rss",
+      "published_iso": "Fri, 13 Mar 2026 11:07:10 -0400",
+      "source": "The Block",
+      "lang": "en"
+    },
+    {
+      "title": "HSBC, Standard Chartered tipped for first Hong Kong stablecoin licenses: Report",
+      "summary": "Hong Kong is set to issue its first stablecoin issuer licenses, with HSBC and Standard Chartered likely among a “very small number” of initially approved issuers, local media reported.",
+      "link": "https://cointelegraph.com/news/hsbc-standard-chartered-hong-kong-stablecoin-report?utm_source=rss_feed&utm_medium=rss_tag_regulation&utm_campaign=rss_partner_inbound",
+      "published_iso": "Fri, 13 Mar 2026 11:04:31 +0000",
+      "source": "CoinTelegraph Regulation",
+      "lang": "en"
+    },
+    {
+      "title": "Bitcoin ‘passing geopolitical stress test’ as BTC price spikes above $72K",
+      "summary": "Bitcoin price analysis saw conditions slowly \"building” to support a breakout as BTC emerged as the strongest macro performer since the US and Israel-Iran war began.",
+      "link": "https://cointelegraph.com/news/bitcoin-passing-geopolitical-stress-test-btc-price-spikes-above-72k?utm_source=rss_feed&utm_medium=rss_tag_bitcoin&utm_campaign=rss_partner_inbound",
+      "published_iso": "Fri, 13 Mar 2026 09:58:54 +0000",
+      "source": "CoinTelegraph Bitcoin",
+      "lang": "en"
+    },
+    {
+      "title": "Unified lending-trading DeFi protocol Ammalgam launches strategy Vaults",
+      "summary": "Ammalgam combines lending, borrowing, and trading into a liquidity system, providing a platform for creating unlimited trading strategies.",
+      "link": "https://www.theblock.co/post/393308/unified-lending-trading-defi-protocol-ammalgam-launches-mainnet-vaults?utm_source=rss&utm_medium=rss",
+      "published_iso": "Fri, 13 Mar 2026 09:01:02 -0400",
+      "source": "The Block",
+      "lang": "en"
+    },
+    {
+      "title": "Bitcoin's 'extremely precise' macro signal puts $100K target back in play",
+      "summary": "US and China's yield crossover amid whale buying suggest Bitcoin may be close to a price bottom, setting up for a move toward six figures in the coming months.",
+      "link": "https://cointelegraph.com/news/bitcoin-extremely-precise-macro-signal-100k-target-back-in-play?utm_source=rss_feed&utm_medium=rss_tag_bitcoin&utm_campaign=rss_partner_inbound",
+      "published_iso": "Fri, 13 Mar 2026 08:41:17 +0000",
+      "source": "CoinTelegraph Bitcoin",
+      "lang": "en"
+    },
+    {
+      "title": "Vitalik distances himself from nonprofit backed by SHIB donation",
+      "summary": "Vitalik Buterin said he is no longer closely aligned with the Future of Life Institute after its strategy shifted following his 2021 SHIB donation.",
+      "link": "https://cointelegraph.com/news/vitalik-buterin-future-of-life-institute-shib-donation?utm_source=rss_feed&utm_medium=rss_tag_ethereum&utm_campaign=rss_partner_inbound",
+      "published_iso": "Fri, 13 Mar 2026 08:32:08 +0000",
+      "source": "CoinTelegraph Ethereum",
+      "lang": "en"
+    },
+    {
+      "title": "TOKEN2049 Dubai moved to 2027 amid heightened security risks in UAE",
+      "summary": "TOKEN2049 postponed its Dubai conference to April 2027 after Iranian strikes disrupted travel, security, and logistics in the UAE.",
+      "link": "https://www.theblock.co/post/393543/token2049-dubai-moved-to-2027-amid-heightened-security-risks-in-uae?utm_source=rss&utm_medium=rss",
+      "published_iso": "Fri, 13 Mar 2026 08:28:21 -0400",
+      "source": "The Block",
+      "lang": "en"
+    },
+    {
+      "title": "Iran war oil shock more likely to affect Bitcoin miners through BTC price than energy costs, analysts say",
+      "summary": "Hashrate Index found that about 90% of global Bitcoin hashrate operates in electricity markets largely insulated from oil prices.",
+      "link": "https://www.theblock.co/post/393531/iran-war-oil-shock-more-likely-to-affect-bitcoin-miners-through-btc-price-than-energy-costs-analysts-say?utm_source=rss&utm_medium=rss",
+      "published_iso": "Fri, 13 Mar 2026 08:04:52 -0400",
+      "source": "The Block",
+      "lang": "en"
+    },
+    {
+      "title": "Vitalik Buterin questions political pivot by AI safety group that cashed out roughly $500M from his SHIB donation",
+      "summary": "Buterin stated that FLI cashed out approximately $500 million from his 2021 SHIB donation, but then pivoted toward political action.",
+      "link": "https://www.theblock.co/post/393525/vitalik-buterin-questions-political-pivot-by-ai-safety-group-that-cashed-out-roughly-500m-from-his-shib-donation?utm_source=rss&utm_medium=rss",
+      "published_iso": "Fri, 13 Mar 2026 07:12:08 -0400",
+      "source": "The Block",
+      "lang": "en"
+    },
+    {
+      "title": "Crypto miners must put their Bitcoin to work to survive: Wintermute",
+      "summary": "Miners who treat their Bitcoin holdings as a working asset rather than a passive reserve “will carry a structural edge into the next halving,” says Wintermute.",
+      "link": "https://cointelegraph.com/news/crypto-miners-put-assets-to-work-to-survive-wintermute?utm_source=rss_feed&utm_medium=rss_tag_bitcoin&utm_campaign=rss_partner_inbound",
+      "published_iso": "Fri, 13 Mar 2026 05:57:27 +0000",
+      "source": "CoinTelegraph Bitcoin",
+      "lang": "en"
+    },
+    {
+      "title": "Bitcoin advocate group to fight Basel’s ‘toxic’ treatment of cryptocurrency",
+      "summary": "The Bitcoin Policy Institute wants to ensure “US regulators get Bitcoin’s treatment right” when the Federal Reserve issues proposals to implement the Basel framework.",
+      "link": "https://cointelegraph.com/news/bitcoin-toxic-asset-basel-framework-federal-reserve-policy-institute?utm_source=rss_feed&utm_medium=rss_tag_bitcoin&utm_campaign=rss_partner_inbound",
+      "published_iso": "Fri, 13 Mar 2026 05:55:10 +0000",
+      "source": "CoinTelegraph Bitcoin",
+      "lang": "en"
+    },
+    {
+      "title": "US sanctions DPRK IT facilitators over crypto transactions in $800 million scheme",
+      "summary": "U.S Treasury sanctioned DPRK IT facilitators linked to crypto laundering networks that generated nearly $800 million for Pyongyang in 2024.",
+      "link": "https://www.theblock.co/post/393518/us-sanctions-dprk-facilitators?utm_source=rss&utm_medium=rss",
+      "published_iso": "Fri, 13 Mar 2026 05:07:23 -0400",
+      "source": "The Block",
+      "lang": "en"
+    },
+    {
+      "title": "Democrats say they will oversee reported DOJ probe into Binance",
+      "summary": "Senators Chris Van Hollen, Elizabeth Warren and Ruben Gallego have vowed to ensure that the Justice Department “conducts a serious investigation into Binance.”",
+      "link": "https://cointelegraph.com/news/democrats-oversee-doj-probe-binance?utm_source=rss_feed&utm_medium=rss_tag_regulation&utm_campaign=rss_partner_inbound",
+      "published_iso": "Fri, 13 Mar 2026 04:39:25 +0000",
+      "source": "CoinTelegraph Regulation",
+      "lang": "en"
+    }
+  ],
+  "twitter": []
+}

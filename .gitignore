@@ -2,3 +2,7 @@
 zalozenia.txt
 plan_dzialania.md
 backend/venv
+.env
+schematy
+backend/training
+backend/data
