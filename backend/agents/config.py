@@ -63,6 +63,25 @@ BUDGET_PLN = 10_000
 # --- HTTP ---
 REQUEST_TIMEOUT = 30
 
+# --- Mapping coinow na slowa kluczowe (do tagowania newsow) ---
+COIN_KEYWORDS: dict[str, list[str]] = {
+    "BTC": ["bitcoin", "btc"],
+    "ETH": ["ethereum", "eth", "ether"],
+    "SOL": ["solana", "sol"],
+    "ADA": ["cardano", "ada"],
+    "XRP": ["ripple", "xrp"],
+    "DOGE": ["dogecoin", "doge"],
+    "DOT": ["polkadot", "dot"],
+    "AVAX": ["avalanche", "avax"],
+    "LINK": ["chainlink", "link"],
+    "MATIC": ["polygon", "matic"],
+    "TON": ["toncoin", "ton"],
+    "TRX": ["tron", "trx"],
+    "LTC": ["litecoin", "ltc"],
+    "UNI": ["uniswap", "uni"],
+    "NEAR": ["near protocol", "near"],
+}
+
 
 def coingecko_headers() -> dict:
     headers = {"Accept": "application/json"}

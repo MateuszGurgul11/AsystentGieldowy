@@ -11,11 +11,11 @@ from typing import Any
 import feedparser
 import httpx
 
-from .config import RSS_FEEDS, REQUEST_TIMEOUT, save_json
+from .config import RSS_FEEDS, REQUEST_TIMEOUT, COIN_KEYWORDS, save_json
 
-MAX_NEWS_PER_SOURCE = 15
-TOP_ARTICLES_TO_FETCH = 5
-MAX_ARTICLE_CHARS = 6000
+MAX_NEWS_PER_SOURCE = 20
+TOP_ARTICLES_TO_FETCH = 15
+MAX_ARTICLE_CHARS = 4000
 RSS_DELAY = 0.5
 
 
@@ -33,6 +33,18 @@ def _strip_html(html: str) -> str:
     text = re.sub(r"<[^>]+>", " ", text)
     text = re.sub(r"\s+", " ", text)
     return text.strip()
+
+
+def _tag_coins(title: str, summary: str) -> list[str]:
+    """Sprawdza ktore coiny sa wymienione w tytule/streszczeniu artykulu."""
+    text = (title + " " + summary).lower()
+    mentioned = []
+    for symbol, keywords in COIN_KEYWORDS.items():
+        for kw in keywords:
+            if kw in text:
+                mentioned.append(symbol)
+                break
+    return mentioned
 
 
 def fetch_article_content(url: str) -> str | None:
@@ -91,6 +103,7 @@ def run() -> dict:
             t = item["title"].lower().strip()
             if t not in seen_titles:
                 seen_titles.add(t)
+                item["mentioned_coins"] = _tag_coins(item.get("title", ""), item.get("summary", ""))
                 all_news.append(item)
         print(f"  {feed['name']}: {len(items)} artykulow")
         time.sleep(RSS_DELAY)

@@ -12,7 +12,7 @@ from .config import (
     OLLAMA_URL, MODEL_NAME, OLLAMA_TIMEOUT, load_json, save_json,
 )
 
-MAX_CONTEXT_CHARS = 8000
+MAX_CONTEXT_CHARS = 12000
 
 
 def _truncate(text: str, limit: int) -> str:
@@ -22,6 +22,9 @@ def _truncate(text: str, limit: int) -> str:
 def _build_context() -> str:
     """Buduje tekstowy kontekst z 5 plikow JSON."""
     sections = []
+
+    now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    sections.append(f"=== DATA ANALIZY: {now} ===")
 
     # 1. Ceny rynkowe
     market = load_json("market_prices.json")
@@ -63,10 +66,14 @@ def _build_context() -> str:
     # 3. Newsy
     news = load_json("news_digest.json")
     if news:
-        articles = news.get("articles", [])[:12]
+        articles = news.get("articles", [])[:20]
         lines = []
         for a in articles:
-            lines.append(f"  [{a.get('source')}] {a.get('title')}")
+            coins_tag = ""
+            mentioned = a.get("mentioned_coins", [])
+            if mentioned:
+                coins_tag = f" [dotyczy: {', '.join(mentioned)}]"
+            lines.append(f"  [{a.get('source')}] {a.get('title')}{coins_tag}")
             if a.get("full_content"):
                 lines.append(f"    Tresc: {a['full_content'][:300]}...")
         sections.append("=== NEWSY ===\n" + "\n".join(lines))
@@ -89,10 +96,16 @@ def _build_context() -> str:
         glob = macro.get("global_crypto", {})
         lines = [
             f"  Fear & Greed: {fng.get('value')} ({fng.get('classification')})",
+        ]
+        if fng.get("interpretation"):
+            lines.append(f"  Interpretacja: {fng['interpretation']}")
+        if fng.get("trend"):
+            lines.append(f"  Trend F&G: {fng['trend']}")
+        lines.extend([
             f"  USD/PLN: {rates.get('usd_pln')}, EUR/PLN: {rates.get('eur_pln')}",
             f"  Globalna kap.: ${glob.get('total_market_cap_usd')}, BTC dom.: {glob.get('btc_dominance_pct')}%",
             f"  Zmiana kap. 24h: {glob.get('market_cap_change_24h_pct')}%",
-        ]
+        ])
         fng_hist = fng.get("history", [])
         if len(fng_hist) > 1:
             vals = [h["value"] for h in fng_hist]
@@ -103,17 +116,24 @@ def _build_context() -> str:
     return _truncate(full_context, MAX_CONTEXT_CHARS)
 
 
-SUMMARIZER_PROMPT = """Jestes analitykiem rynku kryptowalut. Otrzymujesz surowe dane z 5 zrodel (ceny, analiza techniczna, newsy, social media, dane makro).
+SUMMARIZER_PROMPT = """ROLA: Jestes analitykiem rynku kryptowalut. Piszesz streszczenie surowych danych.
 
-Twoje zadanie: napisz ZWIEZLY raport (max 1500 slow) po polsku, zawierajacy:
-1. STAN RYNKU: ogolny trend (byk/niedzwiedz/konsolidacja), sentyment (Fear & Greed), kluczowe zmiany cen.
-2. SYGNALY TECHNICZNE: ktore coiny daja sygnal kupna/sprzedazy wg RSI, MACD, Bollinger. Wyrozni rozbieznosci miedzy timeframe daily i 4h.
-3. KLUCZOWE NEWSY: najwazniejsze wiadomosci ktore moga wplynac na rynek w najblizszych dniach.
-4. SENTYMENT SOCIAL: co mowia wplywowi gracze (jesli dane dostepne).
-5. CZYNNIKI RYZYKA: co moze pojsc nie tak, jakie ryzyka zewnetrzne.
-6. PODSUMOWANIE: 3-5 kluczowych wnioskow.
+KRYTYCZNE ZASADY (BEZWZGLEDNIE PRZESTRZEGAJ):
+- Korzystaj WYLACZNIE z danych podanych ponizej w sekcji "DANE".
+- NIE wymyslaj ZADNYCH faktow, dat, cen, wartosci, zdarzen, newsow.
+- Jesli czegoś nie ma w danych — napisz "brak danych" zamiast wymyslac.
+- Kazda liczba (RSI, cena, procent, Fear & Greed) musi pochodzi DOKLADNIE z podanych danych.
+- Dzisiejsza data jest podana w danych na samym poczatku — UZYWAJ JEJ, NIE WYMYSLAJ INNEJ.
+- NIE dodawaj informacji o wydarzeniach, ktore nie sa wymienione w newsach.
 
-Nie dodawaj informacji ktorych nie ma w danych. Badz precyzyjny z liczbami."""
+ZADANIE: Napisz ZWIEZLE streszczenie (max 1000 slow) po polsku:
+1. STAN RYNKU: trend i sentyment na podstawie Fear & Greed i zmian cen z DANYCH.
+2. SYGNALY TECHNICZNE: RSI, MACD, Bollinger — podaj DOKLADNE wartosci z DANYCH.
+3. KLUCZOWE NEWSY: tylko te ktore sa w sekcji NEWSY w DANYCH. Nie dodawaj wlasnych.
+4. KONTEKST MAKRO: Fear & Greed, kursy walut — TYLKO z sekcji MAKRO w DANYCH.
+5. PODSUMOWANIE: 3-5 wnioskow opartych WYLACZNIE o podane dane.
+
+Odpowiadaj WYLACZNIE po polsku."""
 
 
 def run() -> dict:

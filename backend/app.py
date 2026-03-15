@@ -80,6 +80,7 @@ def _format_ta_preview() -> str:
         lines.append(f"  Daily: RSI={daily.get('rsi_14','?')} | "
                       f"MACD hist={daily.get('macd_histogram','?')} | "
                       f"BB=[{daily.get('bollinger_lower','?')}-{daily.get('bollinger_upper','?')}] | "
+                      f"EMA50={daily.get('ema_50','?')} | EMA200={daily.get('ema_200','?')} | "
                       f"Sygnal: {daily.get('overall','?')}")
         lines.append(f"  4h:    RSI={h4.get('rsi_14','?')} | "
                       f"MACD hist={h4.get('macd_histogram','?')} | "

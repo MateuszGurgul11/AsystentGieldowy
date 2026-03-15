@@ -31,18 +31,47 @@ def fetch_fear_and_greed() -> dict:
         return {"value": None, "classification": "unknown", "history": []}
 
     current = entries[0]
+    current_val = int(current.get("value", 0))
+    history = [
+        {
+            "value": int(e.get("value", 0)),
+            "classification": e.get("value_classification", ""),
+            "timestamp": e.get("timestamp", ""),
+        }
+        for e in entries
+    ]
+
+    # Interpretacja trendu F&G
+    trend_text = ""
+    if len(history) >= 2:
+        week_ago_val = history[-1]["value"]
+        diff = current_val - week_ago_val
+        if diff > 10:
+            trend_text = f"ROSNIE (z {week_ago_val} do {current_val}, +{diff} w 7 dni) — sentyment sie poprawia"
+        elif diff < -10:
+            trend_text = f"SPADA (z {week_ago_val} do {current_val}, {diff} w 7 dni) — sentyment sie pogarsza"
+        else:
+            trend_text = f"STABILNY (z {week_ago_val} do {current_val}, {diff:+d} w 7 dni)"
+
+    interpretation = ""
+    if current_val <= 25:
+        interpretation = "EXTREME FEAR — rynek bardzo wyprzedany, historycznie dobry moment na zakup"
+    elif current_val <= 45:
+        interpretation = "FEAR — inwestorzy sa ostrozni, mozliwe okazje"
+    elif current_val <= 55:
+        interpretation = "NEUTRALNY — rynek w rownowadze"
+    elif current_val <= 75:
+        interpretation = "GREED — optymizm rosnie, uwaga na przegrzanie"
+    else:
+        interpretation = "EXTREME GREED — rynek moze byc przegrzany, ryzyko korekty"
+
     return {
-        "value": int(current.get("value", 0)),
+        "value": current_val,
         "classification": current.get("value_classification", "unknown"),
+        "interpretation": interpretation,
+        "trend": trend_text,
         "timestamp": current.get("timestamp", ""),
-        "history": [
-            {
-                "value": int(e.get("value", 0)),
-                "classification": e.get("value_classification", ""),
-                "timestamp": e.get("timestamp", ""),
-            }
-            for e in entries
-        ],
+        "history": history,
     }
 
 

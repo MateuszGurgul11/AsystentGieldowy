@@ -46,7 +46,7 @@ def _ema(data: list[float], period: int) -> list[float]:
 
 
 def compute_indicators(klines: list[dict]) -> dict:
-    """RSI(14), MACD(12,26,9), SMA(7,25,50,200), Bollinger Bands(20,2), interpretacja."""
+    """RSI(14), MACD(12,26,9), SMA(7,25,50,200), EMA(50,200), Bollinger Bands(20,2), interpretacja."""
     if len(klines) < 14:
         return {}
 
@@ -57,6 +57,10 @@ def compute_indicators(klines: list[dict]) -> dict:
         return round(sum(closes[-n:]) / n, 4) if len(closes) >= n else None
 
     sma7, sma25, sma50, sma200 = sma(7), sma(25), sma(50), sma(200)
+
+    # --- EMA 50 i 200 ---
+    ema50 = round(_ema(closes, 50)[-1], 4) if len(closes) >= 50 else None
+    ema200 = round(_ema(closes, 200)[-1], 4) if len(closes) >= 200 else None
 
     # --- RSI(14) ---
     gains, losses = [], []
@@ -125,9 +129,23 @@ def compute_indicators(klines: list[dict]) -> dict:
         elif current <= bb_lower:
             signals.append("Cena przy dolnym Bollingerze: moze byc wyprzedany")
 
+    if ema200:
+        if current > ema200:
+            signals.append("Cena > EMA200: trend dlugoterminowy WZROSTOWY")
+        else:
+            signals.append("Cena < EMA200: trend dlugoterminowy SPADKOWY")
+
+    if ema50:
+        if current > ema50:
+            signals.append("Cena > EMA50: trend srednioterminowy wzrostowy")
+        else:
+            signals.append("Cena < EMA50: trend srednioterminowy spadkowy")
+
     overall = "NEUTRALNY"
-    buy_signals = sum(1 for s in signals if "zakup" in s.lower() or "kupna" in s.lower() or "wzrostowy" in s.lower() or "wyprzedany" in s.lower())
-    sell_signals = sum(1 for s in signals if "sprzedaz" in s.lower() or "spadkowy" in s.lower() or "wykupiony" in s.lower() or "wykupienie" in s.lower())
+    _buy_kw = ("zakup", "kupna", "wzrostowy", "wyprzedany")
+    _sell_kw = ("sprzedaz", "spadkowy", "wykupiony", "wykupienie")
+    buy_signals = sum(1 for s in signals if any(k in s.lower() for k in _buy_kw))
+    sell_signals = sum(1 for s in signals if any(k in s.lower() for k in _sell_kw))
     if buy_signals > sell_signals:
         overall = "KUPNO"
     elif sell_signals > buy_signals:
@@ -137,6 +155,7 @@ def compute_indicators(klines: list[dict]) -> dict:
         "current_price_usd": current,
         "rsi_14": rsi,
         "sma_7": sma7, "sma_25": sma25, "sma_50": sma50, "sma_200": sma200,
+        "ema_50": ema50, "ema_200": ema200,
         "macd": macd_val, "macd_signal": signal_val, "macd_histogram": histogram,
         "bollinger_upper": bb_upper, "bollinger_middle": bb_middle, "bollinger_lower": bb_lower,
         "signals": signals,
@@ -155,7 +174,7 @@ def run() -> dict:
         coin_data = {"symbol": coin_name}
 
         for interval, label in [("1d", "daily"), ("4h", "4h")]:
-            limit = 60 if interval == "1d" else 100
+            limit = 210 if interval == "1d" else 100
             klines = fetch_klines(sym, interval=interval, limit=limit)
             if klines:
                 indicators = compute_indicators(klines)
