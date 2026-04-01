@@ -10,6 +10,7 @@ CREATE TABLE IF NOT EXISTS profiles (
     id UUID PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE,
     risk_profile TEXT DEFAULT 'medium' CHECK (risk_profile IN ('low', 'medium', 'high')),
     budget_pln DECIMAL(12,2) DEFAULT 0,
+    preferred_currency TEXT DEFAULT 'PLN',
     created_at TIMESTAMPTZ DEFAULT NOW()
 );
 
@@ -45,7 +46,8 @@ CREATE TABLE IF NOT EXISTS portfolio_positions (
     symbol TEXT NOT NULL,
     asset_type TEXT NOT NULL DEFAULT 'crypto' CHECK (asset_type IN ('crypto', 'stock', 'etf')),
     quantity DECIMAL(18,8) NOT NULL,
-    avg_buy_price_pln DECIMAL(12,4) NOT NULL,
+    avg_buy_price DECIMAL(12,4) NOT NULL,
+    currency TEXT NOT NULL DEFAULT 'PLN',
     bought_at TIMESTAMPTZ,
     updated_at TIMESTAMPTZ DEFAULT NOW()
 );

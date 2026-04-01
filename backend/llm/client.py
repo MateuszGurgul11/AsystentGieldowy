@@ -9,12 +9,13 @@ async def ollama_chat(
     temperature: float = 0.3,
     max_tokens: int = 2048,
     stream: bool = False,
+    model: str | None = None,
 ) -> str:
     """Wywołuje Ollama API i zwraca odpowiedź jako string."""
     settings = get_settings()
     url = f"{settings.ollama_url}/api/chat"
     payload = {
-        "model": settings.ollama_model,
+        "model": model or settings.ollama_model,
         "messages": [
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_message},
@@ -38,12 +39,13 @@ async def ollama_chat_stream(
     user_message: str,
     temperature: float = 0.4,
     max_tokens: int = 2048,
+    model: str | None = None,
 ):
     """Generator streamujący odpowiedź token po tokenie."""
     settings = get_settings()
     url = f"{settings.ollama_url}/api/chat"
     payload = {
-        "model": settings.ollama_model,
+        "model": model or settings.ollama_model,
         "messages": [
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_message},

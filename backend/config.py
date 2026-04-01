@@ -18,7 +18,9 @@ class Settings(BaseSettings):
 
     # Ollama
     ollama_url: str = "http://localhost:11434"
-    ollama_model: str = "invest-assistant"
+    ollama_model: str = "invest-assistant"                  # legacy / chat
+    ollama_model_classifier: str = "llama3.2:3b"           # Faza II: filtr
+    ollama_model_analyzer: str = "qwen3.5:35b"             # Faza III: mózg
 
     # CoinGecko
     coingecko_api_key: str = ""

@@ -112,6 +112,37 @@ def _build_context() -> str:
             lines.append(f"  F&G historia (7d): {vals}")
         sections.append("=== KONTEKST MAKRO ===\n" + "\n".join(lines))
 
+    # 6. Top predykcje z Supabase (event-driven alerts)
+    try:
+        import sys, os
+        sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
+        from database import get_supabase
+        db = get_supabase()
+        pred_result = (
+            db.table("predictions")
+            .select("scenarios, recommendation, confidence, reasoning, events(source, author, content, detected_at)")
+            .order("created_at", desc=True)
+            .limit(3)
+            .execute()
+        )
+        if pred_result.data:
+            lines = []
+            for p in pred_result.data:
+                event = p.get("events") or {}
+                author = event.get("author", "?")
+                content = (event.get("content") or "")[:120]
+                rec = p.get("recommendation") or {}
+                action = rec.get("action", "?") if isinstance(rec, dict) else "?"
+                evs = rec.get("expected_values", {}) if isinstance(rec, dict) else {}
+                ev_str = ", ".join(f"{k}:{v:+.1f}%" for k, v in (evs.items() if isinstance(evs, dict) else []))
+                lines.append(
+                    f"  [{author}] \"{content}...\"\n"
+                    f"    → Rekomendacja: {action} | EV: {ev_str} | Pewność: {p.get('confidence','?')}"
+                )
+            sections.append("=== OSTRZEŻENIA I RYZYKA (EVENT MONITOR) ===\n" + "\n".join(lines))
+    except Exception:
+        pass  # Supabase niedostępny - pomiń sekcję
+
     full_context = "\n\n".join(sections)
     return _truncate(full_context, MAX_CONTEXT_CHARS)
 

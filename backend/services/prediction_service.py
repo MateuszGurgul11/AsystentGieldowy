@@ -42,12 +42,13 @@ async def process_event(event_data: dict) -> str | None:
     # 3. Pobierz ostatnie dane rynkowe dla kontekstu
     market_context = _get_market_context(classification.get("affected_assets", []))
 
-    # 4. Generuj scenariusze
+    # 4. Generuj scenariusze - przekaż urgency do kalibracji impactów
     scenarios_data = await generate_scenarios(
         event_content=event_data["content"],
         affected_assets=classification.get("affected_assets", []),
         market_context=market_context,
         impact_direction=classification.get("impact_direction", "unknown"),
+        urgency=classification.get("urgency", "medium"),
     )
 
     # 5. Zapisz predykcję (bez user_id - globalna predykcja zdarzenia)

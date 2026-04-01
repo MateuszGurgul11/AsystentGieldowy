@@ -5,8 +5,6 @@ from typing import Literal
 class UserRegister(BaseModel):
     email: EmailStr
     password: str
-    risk_profile: Literal["low", "medium", "high"] = "medium"
-    budget_pln: float = 0.0
 
 
 class UserLogin(BaseModel):
@@ -19,6 +17,7 @@ class UserResponse(BaseModel):
     email: str
     risk_profile: str
     budget_pln: float
+    preferred_currency: str
     created_at: str
 
 
@@ -35,3 +34,4 @@ class RefreshRequest(BaseModel):
 class UserUpdate(BaseModel):
     risk_profile: Literal["low", "medium", "high"] | None = None
     budget_pln: float | None = None
+    preferred_currency: str | None = None

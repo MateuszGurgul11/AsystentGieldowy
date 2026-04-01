@@ -12,7 +12,7 @@ class AlertManager:
         self._lock = asyncio.Lock()
 
     async def connect(self, user_id: str, websocket: WebSocket):
-        await websocket.accept()
+        # accept() już wywołany w routerze przed walidacją tokenu
         async with self._lock:
             self._connections[user_id] = websocket
 

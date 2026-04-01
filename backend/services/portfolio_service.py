@@ -1,37 +1,48 @@
 from database import get_supabase
 from models.portfolio import PositionResponse, PortfolioResponse
+from services.currency_service import convert
 
 
-def get_latest_price(symbol: str) -> float | None:
-    """Pobiera ostatnią cenę PLN z market_snapshots."""
+def get_latest_price_usd(symbol: str) -> float | None:
+    """Pobiera ostatnią cenę USD z market_snapshots."""
     db = get_supabase()
     result = (
         db.table("market_snapshots")
-        .select("price_pln")
+        .select("price_usd")
         .eq("symbol", symbol.upper())
         .order("snapshot_at", desc=True)
         .limit(1)
         .execute()
     )
-    if result.data:
-        return float(result.data[0]["price_pln"])
+    if result.data and result.data[0].get("price_usd"):
+        return float(result.data[0]["price_usd"])
     return None
 
 
-def enrich_position(position: dict) -> PositionResponse:
-    """Dodaje P&L do pozycji na podstawie ostatniej ceny."""
+def enrich_position(position: dict, display_currency: str = "PLN") -> PositionResponse:
+    """
+    Dodaje P&L do pozycji.
+    Wszystkie wartości przeliczane do display_currency użytkownika.
+    """
     symbol = position["symbol"].upper()
     quantity = float(position["quantity"])
-    avg_price = float(position["avg_buy_price_pln"])
-    cost_basis = quantity * avg_price
+    buy_price = float(position["avg_buy_price"])
+    buy_currency = (position.get("currency") or "PLN").upper()
+    display_currency = display_currency.upper()
 
-    current_price = get_latest_price(symbol)
-    if current_price is not None:
-        current_value = quantity * current_price
-        pnl_pln = current_value - cost_basis
-        pnl_pct = (pnl_pln / cost_basis * 100) if cost_basis > 0 else 0.0
+    # Koszt zakupu w display_currency
+    buy_price_display = convert(buy_price, buy_currency, display_currency)
+    cost_basis = round(quantity * buy_price_display, 2)
+
+    # Aktualna cena - pobieramy w USD i przeliczamy
+    price_usd = get_latest_price_usd(symbol)
+    if price_usd is not None:
+        current_price = round(convert(price_usd, "USD", display_currency), 4)
+        current_value = round(quantity * current_price, 2)
+        pnl = round(current_value - cost_basis, 2)
+        pnl_pct = round((pnl / cost_basis * 100), 2) if cost_basis > 0 else 0.0
     else:
-        current_value = pnl_pln = pnl_pct = None
+        current_price = current_value = pnl = pnl_pct = None
 
     return PositionResponse(
         id=position["id"],
@@ -39,19 +50,21 @@ def enrich_position(position: dict) -> PositionResponse:
         symbol=symbol,
         asset_type=position["asset_type"],
         quantity=quantity,
-        avg_buy_price_pln=avg_price,
+        avg_buy_price=buy_price,
+        currency=buy_currency,
         bought_at=position.get("bought_at"),
         updated_at=position["updated_at"],
-        current_price_pln=current_price,
-        current_value_pln=round(current_value, 2) if current_value is not None else None,
-        cost_basis_pln=round(cost_basis, 2),
-        pnl_pln=round(pnl_pln, 2) if pnl_pln is not None else None,
-        pnl_pct=round(pnl_pct, 2) if pnl_pct is not None else None,
+        current_price=current_price,
+        current_value=current_value,
+        cost_basis=cost_basis,
+        pnl=pnl,
+        pnl_pct=pnl_pct,
+        display_currency=display_currency,
     )
 
 
-def build_portfolio_response(portfolio: dict) -> PortfolioResponse:
-    """Buduje pełną odpowiedź portfela z P&L."""
+def build_portfolio_response(portfolio: dict, display_currency: str = "PLN") -> PortfolioResponse:
+    """Buduje pełną odpowiedź portfela z P&L w wybranej walucie."""
     db = get_supabase()
     positions_raw = (
         db.table("portfolio_positions")
@@ -60,12 +73,12 @@ def build_portfolio_response(portfolio: dict) -> PortfolioResponse:
         .execute()
     ).data or []
 
-    positions = [enrich_position(p) for p in positions_raw]
+    positions = [enrich_position(p, display_currency) for p in positions_raw]
 
-    total_value = sum(p.current_value_pln for p in positions if p.current_value_pln is not None)
-    total_invested = sum(p.cost_basis_pln for p in positions if p.cost_basis_pln is not None)
+    total_value = sum(p.current_value for p in positions if p.current_value is not None)
+    total_invested = sum(p.cost_basis for p in positions if p.cost_basis is not None)
     total_pnl = total_value - total_invested if total_value and total_invested else 0.0
-    total_pnl_pct = (total_pnl / total_invested * 100) if total_invested > 0 else 0.0
+    total_pnl_pct = round((total_pnl / total_invested * 100), 2) if total_invested > 0 else 0.0
 
     return PortfolioResponse(
         id=portfolio["id"],
@@ -74,8 +87,9 @@ def build_portfolio_response(portfolio: dict) -> PortfolioResponse:
         broker=portfolio["broker"],
         created_at=portfolio["created_at"],
         positions=positions,
-        total_value_pln=round(total_value, 2),
-        total_invested_pln=round(total_invested, 2),
-        total_pnl_pln=round(total_pnl, 2),
-        total_pnl_pct=round(total_pnl_pct, 2),
+        total_value=round(total_value, 2),
+        total_invested=round(total_invested, 2),
+        total_pnl=round(total_pnl, 2),
+        total_pnl_pct=total_pnl_pct,
+        display_currency=display_currency,
     )

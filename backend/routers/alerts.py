@@ -74,9 +74,12 @@ def update_settings(
 @router.websocket("/ws")
 async def alerts_websocket(websocket: WebSocket, token: str = Query(...)):
     """WebSocket do odbierania push notyfikacji alertów."""
+    await websocket.accept()
+
     try:
         user_id = get_user_id_from_token(token)
     except Exception:
+        await websocket.send_json({"type": "error", "message": "Nieprawidłowy token"})
         await websocket.close(code=4001)
         return
 

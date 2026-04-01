@@ -54,7 +54,7 @@ TWITTER_USERNAMES = [
 
 # --- Ollama ---
 OLLAMA_URL = "http://localhost:11434"
-MODEL_NAME = "invest-assistant"
+MODEL_NAME = os.environ.get("OLLAMA_MODEL_ANALYZER", "qwen3.5:35b")
 OLLAMA_TIMEOUT = 180
 
 # --- Budzet ---

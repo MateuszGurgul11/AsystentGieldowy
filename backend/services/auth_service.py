@@ -48,5 +48,6 @@ def _resolve_user(token: str) -> dict:
         "email": auth_user.email,
         "risk_profile": profile.get("risk_profile", "medium"),
         "budget_pln": profile.get("budget_pln", 0),
+        "preferred_currency": profile.get("preferred_currency", "PLN"),
         "created_at": str(auth_user.created_at),
     }

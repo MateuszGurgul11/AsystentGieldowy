@@ -2,8 +2,19 @@ import asyncio
 from fastapi import APIRouter, Depends, HTTPException, BackgroundTasks
 from database import get_supabase
 from services.auth_service import get_current_user
+from services.currency_service import get_all_rates_for_display, SUPPORTED_CURRENCIES
 
 router = APIRouter(prefix="/api/analysis", tags=["analysis"])
+
+
+@router.get("/currencies")
+def get_currencies(current_user: dict = Depends(get_current_user)):
+    """Zwraca aktualne kursy wszystkich obsługiwanych walut (baza USD)."""
+    return {
+        "supported": SUPPORTED_CURRENCIES,
+        "rates_vs_usd": get_all_rates_for_display(),
+        "note": "Kursy z open.er-api.com, odświeżane co 1h",
+    }
 
 
 @router.get("/market")
@@ -91,6 +102,38 @@ def get_events(limit: int = 20, current_user: dict = Depends(get_current_user)):
         .execute()
     )
     return {"events": result.data or []}
+
+
+@router.delete("/predictions/stale")
+def cleanup_stale_predictions(current_user: dict = Depends(get_current_user)):
+    """
+    Usuwa predykcje z szablonowymi rekomendacjami (wygenerowane przed naprawą EV logic).
+    Identyfikuje je po action='HOLD/BUY/SELL/REDUCE_RISK/WAIT' lub reasoning='Ogólne uzasadnienie analizy'.
+    """
+    db = get_supabase()
+    result = db.table("predictions").select("id, recommendation, llm_reasoning").execute()
+    stale_ids = []
+    for p in (result.data or []):
+        rec = p.get("recommendation") or {}
+        if isinstance(rec, str):
+            import json as _json
+            try:
+                rec = _json.loads(rec)
+            except Exception:
+                rec = {}
+        action = rec.get("action", "") if isinstance(rec, dict) else ""
+        reasoning = p.get("llm_reasoning") or ""
+        if (
+            action == "HOLD/BUY/SELL/REDUCE_RISK/WAIT"
+            or reasoning in ("Ogólne uzasadnienie analizy", "", None)
+            or "expected_values" not in rec
+        ):
+            stale_ids.append(p["id"])
+
+    if stale_ids:
+        db.table("predictions").delete().in_("id", stale_ids).execute()
+
+    return {"deleted": len(stale_ids), "ids": stale_ids}
 
 
 @router.post("/run-pipeline")

@@ -37,13 +37,15 @@ async def chat_websocket(websocket: WebSocket, token: str = Query(...)):
     Klient wysyła: {"message": "treść", "session_id": "opcjonalne-uuid"}
     Serwer odpowiada strumieniowo tokenami, potem {"done": true}
     """
+    await websocket.accept()
+
     try:
         user_id = get_user_id_from_token(token)
     except Exception:
+        await websocket.send_json({"type": "error", "message": "Nieprawidłowy token"})
         await websocket.close(code=4001)
         return
 
-    await websocket.accept()
     db = get_supabase()
 
     # Pobierz profil użytkownika

@@ -23,12 +23,8 @@ def register(data: UserRegister):
 
     user_id = auth_response.user.id
 
-    # Aktualizuj profil z risk_profile i budget_pln
-    db.table("profiles").upsert({
-        "id": user_id,
-        "risk_profile": data.risk_profile,
-        "budget_pln": data.budget_pln,
-    }).execute()
+    # Trigger SQL tworzy profil automatycznie z domyślnymi wartościami
+    # (risk_profile=medium, budget_pln=0)
 
     # Stwórz domyślny portfel
     db.table("portfolios").insert({

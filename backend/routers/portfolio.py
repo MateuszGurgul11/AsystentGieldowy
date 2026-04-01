@@ -16,20 +16,30 @@ def _get_user_portfolio(user_id: str) -> dict:
 
 
 @router.get("", response_model=PortfolioResponse)
-def get_portfolio(current_user: dict = Depends(get_current_user)):
+def get_portfolio(
+    currency: str | None = None,
+    current_user: dict = Depends(get_current_user),
+):
+    """Zwraca portfel z P&L. currency=USD/EUR/PLN - nadpisuje preferred_currency profilu."""
+    display_currency = (currency or current_user.get("preferred_currency", "PLN")).upper()
     portfolio = _get_user_portfolio(current_user["id"])
-    return build_portfolio_response(portfolio)
+    return build_portfolio_response(portfolio, display_currency)
 
 
 @router.get("/pnl", response_model=PnLResponse)
-def get_pnl(current_user: dict = Depends(get_current_user)):
+def get_pnl(
+    currency: str | None = None,
+    current_user: dict = Depends(get_current_user),
+):
+    display_currency = (currency or current_user.get("preferred_currency", "PLN")).upper()
     portfolio = _get_user_portfolio(current_user["id"])
-    full = build_portfolio_response(portfolio)
+    full = build_portfolio_response(portfolio, display_currency)
     return PnLResponse(
-        total_value_pln=full.total_value_pln,
-        total_invested_pln=full.total_invested_pln,
-        total_pnl_pln=full.total_pnl_pln,
+        total_value=full.total_value,
+        total_invested=full.total_invested,
+        total_pnl=full.total_pnl,
         total_pnl_pct=full.total_pnl_pct,
+        display_currency=display_currency,
         positions=full.positions,
     )
 
@@ -44,11 +54,13 @@ def add_position(data: PositionCreate, current_user: dict = Depends(get_current_
         "symbol": data.symbol.upper(),
         "asset_type": data.asset_type,
         "quantity": data.quantity,
-        "avg_buy_price_pln": data.avg_buy_price_pln,
+        "avg_buy_price": data.avg_buy_price,
+        "currency": data.currency.upper(),
         "bought_at": data.bought_at.isoformat() if data.bought_at else None,
     }
     result = db.table("portfolio_positions").insert(row).execute()
-    return enrich_position(result.data[0])
+    display_currency = current_user.get("preferred_currency", "PLN")
+    return enrich_position(result.data[0], display_currency)
 
 
 @router.put("/position/{position_id}")
@@ -60,7 +72,6 @@ def update_position(
     db = get_supabase()
     portfolio = _get_user_portfolio(current_user["id"])
 
-    # Sprawdź że pozycja należy do portfela użytkownika
     existing = (
         db.table("portfolio_positions")
         .select("*")
@@ -74,9 +85,12 @@ def update_position(
     updates = data.model_dump(exclude_none=True)
     if data.bought_at:
         updates["bought_at"] = data.bought_at.isoformat()
+    if data.currency:
+        updates["currency"] = data.currency.upper()
 
     result = db.table("portfolio_positions").update(updates).eq("id", position_id).execute()
-    return enrich_position(result.data[0])
+    display_currency = current_user.get("preferred_currency", "PLN")
+    return enrich_position(result.data[0], display_currency)
 
 
 @router.delete("/position/{position_id}", status_code=status.HTTP_204_NO_CONTENT)
